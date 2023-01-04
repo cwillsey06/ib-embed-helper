@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "Makes sending inkbunny images easier",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon --esm ./server.ts",
+    "build": "tsc",
+    "start": "ts-node --esm ./server.ts"
   },
   "keywords": [],
   "author": "cwillsey06",
   "license": "ISC",
   "devDependencies": {
-    "express.js": "^1.0.0",
-    "nodemon": "^2.0.20"
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   }
 }
