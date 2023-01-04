@@ -11,16 +11,22 @@
 
 */
 
+import * as secrets from "./secrets.js";
 import http from "http";
-// import secrets from "./secrets.json";
 
+const username = secrets.default.username;
+const password = secrets.default.password;
 const port = 8080;
 
 const server = http.createServer((req, res) => {
-  res.write("Hello, world!");
+  res.write(`username: ${username}\n`);
+  res.write(`password: ${password}\n`);
   res.end();
 });
 
 server.listen(port, () => {
   console.log(`Server listening on port ${port}`);
+
+  console.log(`username: ${username}`);
+  console.log(`password: ${password}`);
 });
