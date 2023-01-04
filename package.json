@@ -2,15 +2,16 @@
   "name": "ib-embed-helper",
   "version": "1.0.0",
   "description": "Makes sending inkbunny images easier",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "cwillsey06",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "express.js": "^1.0.0",
+    "nodemon": "^2.0.20"
   }
 }
